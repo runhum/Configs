@@ -4,12 +4,13 @@ echo "Creating Developer folder..."
 mkdir ~/Developer
 
 echo "Installing Homebrew..."
-#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 
 
 brew install \
     git \
+    git-lfs \
     swiftformat
 
 brew cask install \
