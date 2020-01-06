@@ -1,14 +1,10 @@
 #!/bin/zsh
 
-echo "Linking .zshrc to root folder..."
-ln ./.zshrc ~/.zshrc
-
 echo "Creating Developer folder..."
 mkdir ~/Developer
 
 echo "Installing Homebrew..."
-
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 
 
@@ -17,13 +13,17 @@ brew install \
     swiftformat
 
 brew cask install \
-    # Developer tools
     visual-studio-code \
     transmission \
-    # Tools
     little-snitch \
     micro-snitch \
-    # Entertainment
     spotify \
     iina
     
+brew cleanup
+
+echo "Installing oh-my-zsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "Appending aliases to .zshrc..."
+cat .zshrc >> ~/.zshrc
