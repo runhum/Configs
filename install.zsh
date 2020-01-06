@@ -19,7 +19,10 @@ brew cask install \
     little-snitch \
     micro-snitch \
     spotify \
-    iina
+    iina \
+    docker \
+    telegram \
+    tableplus
     
 brew cleanup
 
